@@ -1,0 +1,16 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.checkbox {
+    @include horizontal-list;
+    align-items: center;
+    justify-content: flex-start;
+    // background: #000;
+    // flex-direction: row-reverse;
+    gap: 1ch;
+    width: 100%;
+
+    label {
+        font-size: 14px;
+    }
+}

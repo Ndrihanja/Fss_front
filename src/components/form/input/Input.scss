@@ -1,0 +1,37 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+
+.input {
+    @include vertical-list;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: .7ch;
+    width: 100%;
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        padding: 1ch 2ch;
+        background: darken($color: $soft, $amount: 4);
+        border: 2px solid transparent;
+        outline: none;
+        border-radius: 7px;
+        font-family: 'Poppins', sans-serif;
+        width: 100%;
+
+        &:focus {
+            border-color: $tertiary;
+        }
+
+        &:focus + label {
+            color: darken($color: $tertiary, $amount: 2);
+        }
+
+        &::placeholder {
+            color: #AAA;
+        }
+    }
+}

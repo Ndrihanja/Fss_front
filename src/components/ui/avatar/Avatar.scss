@@ -1,0 +1,10 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.avatar {
+    background: $tertiary;
+    color: $primary;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+}

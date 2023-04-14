@@ -1,0 +1,24 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.client {
+    @include vertical-list;
+    width: 100%;
+    gap: 1rem;
+
+    .container-top {
+        @include horizontal-list;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .table {
+        min-height: 50vh;
+        height: 100%;
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+        padding: .5rem 1rem 1rem 1rem;
+    }
+}

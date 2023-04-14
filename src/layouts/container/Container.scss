@@ -1,0 +1,11 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.container {
+    padding: 2ch 3ch;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background: #f0f0f06a;
+    overflow-y: scroll;
+}

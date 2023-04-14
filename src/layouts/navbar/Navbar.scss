@@ -1,0 +1,19 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+nav {
+    @include horizontal-list;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .search-parent {
+        width: 40%;
+    }
+
+    .user {
+        @include horizontal-list;
+        align-items: center;
+        gap: 1ch;
+    }
+}

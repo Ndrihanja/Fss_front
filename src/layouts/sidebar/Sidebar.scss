@@ -1,0 +1,102 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.sidebar {
+    @include vertical-list;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 300px;
+    padding-right: 5ch;
+
+    .sidebar-nav {
+        @include vertical-list;
+        align-items: flex-start;
+        gap: 3rem;
+        width: 100%;
+
+        .nav-top {
+            @include horizontal-list;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .logo {
+                @include horizontal-list;
+                align-items: center;
+                gap: 1rem;
+
+                .logo-img {
+                    background: #FC0;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    height: 50px;
+                    width: 50px;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                h3 {
+                    font-style: italic;
+                }
+            }
+
+            .btn-icon {
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .nav-middle {
+            @include vertical-list;
+            align-items: flex-start;
+            gap: 1ch;
+            width: 100%;
+
+            li {
+                width: 100%;
+            }
+        }
+    }
+
+    .sidebar-link {
+        @include horizontal-list;
+        align-items: center;
+        gap: 1.5ch;
+        padding: 1.5ch 3ch;
+        border-radius: 30px;
+        font-weight: 600;
+
+        i {
+            font-size: 24px;
+        }
+
+        &.active {
+            background: lighten($color: $primary, $amount: 5);
+            color: white;
+            box-shadow: 5px 20px 30px -15px rgba(255, 0, 0, 0.5);
+        }
+    }
+
+    &.closed {
+        width: auto;
+
+        .sidebar-nav {
+            .nav-top {
+                @include vertical-list;
+                gap: 1ch;
+                .btn-icon {
+                    height: 4ch;
+                    width: 4ch;
+                }
+            }
+        }
+
+        .sidebar-link {
+            padding: 1.5ch;
+        }
+    }
+}

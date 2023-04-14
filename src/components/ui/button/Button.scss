@@ -1,0 +1,36 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.btn-icon {
+    @include btn-icon;
+}
+
+.btn-text {
+    @include btn-text;
+}
+
+.btn-primary {
+    background: $primary;
+    color: white;
+    transition: all .4s linear;
+
+    &:hover {
+        background: red;
+    }
+}
+
+.btn-secondary {
+    @include bordered;
+    background: transparent;
+    color: $text;
+}
+
+.btn-tertiary {
+    background: darken($color: $tertiary, $amount: 1);
+    color: white;
+    transition: all .4s linear;
+
+    &:hover {
+        background: $tertiary;
+    }
+}

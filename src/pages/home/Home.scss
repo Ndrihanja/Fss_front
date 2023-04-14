@@ -1,0 +1,54 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.dashboard {
+    @include horizontal-list;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    padding: .7rem 0;
+
+    &>div {
+        @include vertical-list;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        &.count {
+            flex: auto;
+
+            .stat-card {
+                width: 100%;
+                @include horizontal-list;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1.5rem;
+                // border: 2px solid #555;
+                background: white;
+                border-radius: 10px;
+
+                .card-icon {
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 100%;
+                    display: grid;
+                    place-items: center;
+                    background: rgba($color: $tertiary, $alpha: 0.3);
+                    border: 1px solid $tertiary;
+
+                    i {
+                        font-size: x-large;
+                        color: darken($color: $tertiary, $amount: 5);
+                    }
+                }
+            }
+        }
+
+        &.chart {
+            @include vertical-list;
+            flex: 4;
+
+            canvas {
+                object-fit: contain;
+            }
+        }
+    }
+}

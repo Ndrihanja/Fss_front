@@ -1,0 +1,35 @@
+@mixin vertical-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin horizontal-list {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin bordered {
+    border: 1.5px solid #EEE;
+
+    &:hover {
+        background: rgba(240, 240, 240, 0.1);
+    }
+}
+
+@mixin btn-icon {
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    width: 6ch;
+}
+
+@mixin btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1ch;
+    border-radius: 30px;
+    padding: 0 3ch;
+    font-family: 'Poppins', sans-serif;
+}

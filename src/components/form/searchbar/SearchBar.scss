@@ -1,0 +1,35 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.searchbar {
+    position: relative;
+    width: 100%;
+
+    i {
+        position: absolute;
+        font-size: 20px;
+        height: 100%;
+        width: 3ch;
+        display: grid;
+        place-items: center;
+        color: $text;
+    }
+
+    input {
+        @include bordered;
+        padding: 1ch 3ch 1ch 6ch;
+        border-radius: 30px;
+        font-family: 'Poppins';
+        font-size: 13px;
+        width: 100%;
+        
+        &::placeholder {
+            color: $text;
+            font-size: 14px;
+        }
+
+        &:focus {
+            border-color: $tertiary;
+        }
+    }
+}

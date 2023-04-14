@@ -1,0 +1,16 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.new-dossier {
+    .container-top {
+        @include horizontal-list;
+        align-items: center;
+        margin-bottom: 3rem;
+        gap: 3rem;
+
+        a {
+           height: 4ch;
+           padding: 0 2ch;
+        }
+    }
+}
